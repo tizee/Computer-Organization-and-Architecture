@@ -1,0 +1,15 @@
+NET "A[0]" LOC = 'T10' ;
+NET "A[1]"LOC ='T9' ;
+NET "A[2]"LOC ='V9' ;
+NET "A[3]"LOC ='M8' ;
+NET "B[0]"LOC ='N8' ;
+NET "B[1]"LOC ='U8' ;
+NET "B[2]"LOC ='V8' ;
+NET "B[3]"LOC = 'T5';
+NET "CIN" LOC = 'C4';
+NET "COUT" LOC = 'U16';
+
+NET "F[0]" LOC = 'T11' ;
+NET "F[1]" LOC = 'R11' ;
+NET "F[2]" LOC = 'N11' ;
+NET "F[3]" LOC = 'M11' ;

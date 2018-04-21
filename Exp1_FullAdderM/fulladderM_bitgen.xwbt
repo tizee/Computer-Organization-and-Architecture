@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\CCOAexp\Exp1_FullAdderM\fulladderM.ncd
+OUTFILE=E:\CCOAexp\Exp1_FullAdderM\fulladderM.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=E:\CCOAexp\Exp1_FullAdderM
+LICENSE=WebPack
+USER_INFO=__0_0_0

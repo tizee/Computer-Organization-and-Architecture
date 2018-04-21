@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "E:/CCOAexp/Exp2CLAAdderM/CLLAAdderM.xst" -ofn "E:/CCOAexp/Exp2CLAAdderM/CLLAAdderM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 CLLAAdderM.ngc CLLAAdderM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLLAAdderM_map.ncd CLLAAdderM.ngd CLLAAdderM.pcf 
+par -w -intstyle ise -ol high -mt off CLLAAdderM_map.ncd CLLAAdderM.ncd CLLAAdderM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLLAAdderM.twx CLLAAdderM.ncd -o CLLAAdderM.twr CLLAAdderM.pcf 
+bitgen -intstyle ise -f CLLAAdderM.ut CLLAAdderM.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLAAAdderM.ucf -p xc6slx16-csg324-3 CLLAAdderM.ngc CLLAAdderM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLLAAdderM_map.ncd CLLAAdderM.ngd CLLAAdderM.pcf 
+par -w -intstyle ise -ol high -mt off CLLAAdderM_map.ncd CLLAAdderM.ncd CLLAAdderM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLLAAdderM.twx CLLAAdderM.ncd -o CLLAAdderM.twr CLLAAdderM.pcf -ucf CLAAAdderM.ucf 
+bitgen -intstyle ise -f CLLAAdderM.ut CLLAAdderM.ncd 

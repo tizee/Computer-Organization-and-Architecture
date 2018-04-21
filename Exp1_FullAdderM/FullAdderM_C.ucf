@@ -1,0 +1,8 @@
+NET "A" LOC = T10;
+NET "Cin" LOC = V9;
+NET "Cout" LOC = T11;
+NET "F" LOC = R11;
+
+# PlanAhead Generated physical constraints 
+
+NET "B" LOC = T9;
