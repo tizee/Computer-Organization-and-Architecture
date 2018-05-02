@@ -1,0 +1,28 @@
+Command line:
+   CLLAAdderM_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  6909
+
+Fri Apr 27 15:53:36 2018
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 674.746 Meg
+
+ Total Signals          : 56
+ Total Nets             : 49
+ Total Signal Drivers   : 38
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 40
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 149
+
+ Total Simulation Time: 0.374402 sec
+
+ Current Memory Usage: 674.746 Meg
+
+Fri Apr 27 15:53:55 2018
+

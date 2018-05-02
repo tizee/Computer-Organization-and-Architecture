@@ -1,0 +1,2 @@
+verilog work "../Exp1_FullAdderM/fulladderM.v"
+verilog work "CLLAAdderM.v"
