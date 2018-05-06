@@ -1,0 +1,2151 @@
+
+<!-- saved from url=(0060)http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir_files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>MIPS Instruction Reference</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Jim Frenzel</o:Author>
+  <o:LastAuthor>Jim Frenzel</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>13</o:TotalTime>
+  <o:Created>2008-07-09T20:06:00Z</o:Created>
+  <o:LastSaved>2008-07-09T20:06:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1932</o:Words>
+  <o:Characters>11017</o:Characters>
+  <o:Company>MRCI, University of Idaho</o:Company>
+  <o:Lines>91</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>12924</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:DoNotRelyOnCSS/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>FullPage</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:"Arial Unicode MS";
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Batang;}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Batang;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:Batang;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Batang;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:495534155;
+	mso-list-template-ids:-959559352;}
+@list l0:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:552469021;
+	mso-list-template-ids:-959559352;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="white" lang="EN-US" link="blue" vlink="blue" style="tab-interval:.5in">
+
+<div class="Section1">
+
+<h1 align="center" style="text-align:center"><b style="mso-bidi-font-weight:normal"><font size="6" face="Times New Roman"><span style="font-size:24.0pt;mso-bidi-font-weight:
+normal">MIPS Instruction Reference</span></font></b></h1>
+
+<p><font size="3" face="Times New Roman"><span style="font-size:12.0pt">This is a
+description of the MIPS instruction set, their meanings, syntax, semantics, and
+bit encodings. The syntax given for each instruction refers to the assembly language
+syntax supported by the MIPS assembler. Hyphens in the encoding indicate
+"don't care" bits which are not considered when an instruction is
+being decoded. </span></font></p>
+
+<p><font size="3" face="Times New Roman"><span style="font-size:12.0pt">General
+purpose registers (<span class="SpellE">GPRs</span>) are indicated with a dollar
+sign ($). The words SWORD and UWORD refer to 32-bit signed and 32-bit unsigned
+data types, respectively. </span></font></p>
+
+<p><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The
+manner in which the processor executes an instruction and advances its program
+counters is as follows: </span></font></p>
+
+<ol start="1" type="1">
+ <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">execute the
+     instruction at <var><i style="mso-bidi-font-style:normal"><font face="Times New Roman"><span style="mso-bidi-font-style:normal">PC</span></font></i></var>
+     </span></font></li>
+ <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">copy <span class="SpellE"><var><i style="mso-bidi-font-style:normal"><font face="Times New Roman"><span style="mso-bidi-font-style:normal">nPC</span></font></i></var></span>
+     to <var><i style="mso-bidi-font-style:normal"><font face="Times New Roman"><span style="mso-bidi-font-style:normal">PC</span></font></i></var> </span></font></li>
+ <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">add 4 or the branch
+     offset to <span class="SpellE"><var><i style="mso-bidi-font-style:normal"><font face="Times New Roman"><span style="mso-bidi-font-style:normal">nPC</span></font></i></var></span>
+     </span></font></li>
+</ol>
+
+<p><font size="3" face="Times New Roman"><span style="font-size:12.0pt">This
+behavior is indicated in the instruction specifications below. For brevity, the
+function <span class="SpellE">advance_pc</span> (<span class="SpellE">int</span>)
+is used in many of the instruction descriptions. This function is defined as
+follows: </span></font></p>
+
+<blockquote style="margin-top:5.0pt;margin-bottom:5.0pt"><pre><font size="2" face="Courier New"><span style="font-size:10.0pt"><o:p>&nbsp;</o:p></span></font></pre><pre><span class="GramE"><font size="2" face="Courier New"><span style="font-size:10.0pt">void</span></font></span> <span class="SpellE">advance_pc</span> (SWORD offset)</pre><pre><font size="2" face="Courier New"><span style="font-size:10.0pt">{</span></font></pre><pre><font size="2" face="Courier New"><span style="font-size:10.0pt"><span style="mso-tab-count:1">&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span><span class="GramE">PC<span style="mso-spacerun:yes">&nbsp; </span>=</span><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">nPC</span>;</span></font></pre><pre><font size="2" face="Courier New"><span style="font-size:10.0pt"><span style="mso-tab-count:1">&nbsp; </span> <span class="SpellE"><span class="GramE">nPC</span></span><span class="GramE"><span style="mso-spacerun:yes">&nbsp; </span>+</span>= offset;</span></font></pre><pre><font size="2" face="Courier New"><span style="font-size:10.0pt">}</span></font></pre></blockquote>
+
+<p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:
+12.0pt">Note: ALL arithmetic immediate values are sign-extended. After that,
+they are handled as signed or unsigned 32 bit numbers, depending upon the
+instruction. The only difference between signed and unsigned instructions is
+that signed instructions can generate an overflow exception and unsigned
+instructions can not. </span></font></p>
+
+<p><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The
+instruction descriptions are given below: </span></font></p>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ADD – <i><span style="font-style:italic">Add (with overflow)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Adds two registers and stores the result in a
+  register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s + $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">add $d, $s, $t </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 0000</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ADDI -- <i><span style="font-style:italic">Add immediate (with overflow)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Adds a register and a sign-extended immediate value and
+  stores the result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = $s + <span class="SpellE">imm</span>; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">addi</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0010 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ADDIU -- <i><span style="font-style:italic">Add immediate unsigned (no overflow)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Adds a register and a sign-extended immediate value
+  and stores the result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = $s + <span class="SpellE">imm</span>; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">addiu</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0010 01ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ADDU -- <i><span style="font-style:italic">Add unsigned (no overflow)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Adds two registers and stores the result in a
+  register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s + $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">addu</span></font></span> $d, $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 0001</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">AND -- <i><span style="font-style:italic">Bitwise and</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Bitwise ands two registers and stores the result in
+  a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s &amp; $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">and $d, $s, $t </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 0100</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ANDI -- <i><span style="font-style:italic">Bitwise and immediate</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Bitwise ands a register and an immediate value and
+  stores the result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = $s &amp; <span class="SpellE">imm</span>; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">andi</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0011 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BEQ -- <i><span style="font-style:italic">Branch on equal</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the two registers are equal </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s == $t <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">beq</span></font></span> $s, $t, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0001 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BGEZ -- <i><span style="font-style:italic">Branch on greater than or equal to zero</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is greater than or equal to
+  zero </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &gt;= 0 <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bgez</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 01ss sss0 0001 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BGEZAL -- <i><span style="font-style:italic">Branch on greater than or equal to zero and link</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is greater than or equal to
+  zero and saves the return address in $31 </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &gt;= 0 $31 = PC + 8 (or <span class="SpellE">nPC</span>
+  + 4); <span class="SpellE">advance_pc</span> (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bgezal</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 01ss sss1 0001 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BGTZ -- <i><span style="font-style:italic">Branch on greater than zero</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is greater than zero </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &gt; 0 <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bgtz</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0001 11ss sss0 0000 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BLEZ -- <i><span style="font-style:italic">Branch on less than or equal to zero</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is less than or equal to
+  zero </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt;= 0 <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">blez</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0001 10ss sss0 0000 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BLTZ -- <i><span style="font-style:italic">Branch on less than zero</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is less than zero </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; 0 <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bltz</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 01ss sss0 0000 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BLTZAL -- <i><span style="font-style:italic">Branch on less than zero and link</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the register is less than zero and saves
+  the return address in $31 </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; 0 $31 = PC + 8 (or <span class="SpellE">nPC</span>
+  + 4); <span class="SpellE">advance_pc</span> (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bltzal</span></font></span> $s, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 01ss sss1 0000 <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">BNE -- <i><span style="font-style:italic">Branch on not equal</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Branches if the two registers are not equal </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s != $t <span class="SpellE">advance_pc</span>
+  (offset &lt;&lt; 2)); else <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">bne</span></font></span> $s, $t, offset </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0001 01ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">DIV -- <i><span style="font-style:italic">Divide</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Divides $s by $t and stores the quotient in $LO and
+  the remainder in $HI </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$LO = $s / $t; $HI = $s % $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">div $s, $t </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> 0000 <span class="SpellE">0000</span> 0001 1010</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">DIVU -- <i><span style="font-style:italic">Divide unsigned</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Divides $s by $t and stores the quotient in $LO and
+  the remainder in $HI </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$LO = $s / $t; $HI = $s % $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">divu</span></font></span> $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> 0000 <span class="SpellE">0000</span> 0001 1011</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">J -- <i><span style="font-style:italic">Jump</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Jumps to the calculated address </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">PC = <span class="SpellE">nPC</span>; <span class="SpellE">nPC</span> = (PC &amp; 0xf0000000) | (target &lt;&lt; 2); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">j target </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 10ii <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">JAL -- <i><span style="font-style:italic">Jump and link</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Jumps to the calculated address and stores the
+  return address in $31 </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$31 = PC + 8 (or <span class="SpellE">nPC</span> + 4);
+  PC = <span class="SpellE">nPC</span>; <span class="SpellE">nPC</span> = (PC &amp;
+  0xf0000000) | (target &lt;&lt; 2); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">jal</span></font></span> target </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 11ii <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">JR -- <i><span style="font-style:italic">Jump register</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Jump to the address contained in register $s </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">PC = <span class="SpellE">nPC</span>; <span class="SpellE">nPC</span> = $s; </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">jr</span></font></span> $s </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss sss0 0000 <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span> 1000</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">LB -- <i><span style="font-style:italic">Load byte</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">A byte is loaded into a register from the specified
+  address. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = MEM[$s + offset]; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">lb $t, offset($s) </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">1000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">LUI -- <i><span style="font-style:italic">Load upper immediate</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The immediate value is shifted left 16 bits and
+  stored in the register. The lower 16 bits are zeroes. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = (<span class="SpellE">imm</span> &lt;&lt; 16); <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">lui</span></font></span> $t, <span class="SpellE">imm</span>
+  </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0011 11-- ---t <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span></span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">LW -- <i><span style="font-style:italic">Load word</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">A word is loaded into a register from the specified
+  address. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = MEM[$s + offset]; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">lw</span></font></span> $t, offset($s) </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">1000 11ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">MFHI -- <i><span style="font-style:italic">Move from HI</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The contents of register HI are moved to the
+  specified register. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $HI; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">mfhi</span></font></span> $d </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">dddd</span>
+  d000 0001 0000</span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">MFLO -- <i><span style="font-style:italic">Move from LO</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The contents of register LO are moved to the
+  specified register. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $LO; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">mflo</span></font></span> $d </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">dddd</span>
+  d000 0001 0010</span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">MULT -- <i><span style="font-style:italic">Multiply</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Multiplies $s by $t and stores the result in $LO. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$LO = $s * $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">mult</span></font></span> $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> 0000 <span class="SpellE">0000</span> 0001 1000</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">MULTU -- <i><span style="font-style:italic">Multiply unsigned</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Multiplies $s by $t and stores the result in $LO. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$LO = $s * $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">multu</span></font></span> $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> 0000 <span class="SpellE">0000</span> 0001 1001</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">NOOP -- <i><span style="font-style:italic">no operation</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Performs no operation. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">advance_pc</span></font></span> (4); </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">noop</span></font></span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span>
+  <span class="SpellE">0000</span> <span class="SpellE">0000</span> <span class="SpellE">0000</span></span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:
+12.0pt"><br>
+Note: The encoding for a NOOP represents the instruction SLL $0, $0, 0 which has
+no side effects. In fact, nearly every instruction that has $0 as its
+destination register will have no side effect and can thus be considered a NOOP
+instruction. </span></font></p>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">OR -- <i><span style="font-style:italic">Bitwise or</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Bitwise logical ors two registers and stores the
+  result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s | $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">or $d, $s, $t </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 0101</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">ORI -- <i><span style="font-style:italic">Bitwise or immediate</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Bitwise ors a register and an immediate value and stores
+  the result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = $s | <span class="SpellE">imm</span>; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">ori</span></font></span> $t, $s, <span class="SpellE">imm</span>
+  </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0011 01ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SB -- <i><span style="font-style:italic">Store byte</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The least significant byte of $t is stored at the
+  specified address. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">MEM[$s + offset] = (0xff &amp; $t); <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sb</span></font></span> $t, offset($s) </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">1010 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLL -- <i><span style="font-style:italic">Shift left logical </span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Shifts a register value left by the shift amount
+  listed in the instruction and places the result in a third register. Zeroes
+  are shifted in. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $t &lt;&lt; h; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sll</span></font></span> $d, $t, h </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> <span class="SpellE">dhhh</span>
+  hh00 0000</span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLLV -- <i><span style="font-style:italic">Shift left logical variable</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Shifts a register value left by the value in a
+  second register and places the result in a third register. Zeroes are shifted
+  in. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $t &lt;&lt; $s; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sllv</span></font></span> $d, $t, $s </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d--- --00 0100</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLT -- <i><span style="font-style:italic">Set on less than (signed)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">If $s is less than $t, $d is set to one. It gets
+  zero otherwise. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; $t $d = 1; <span class="SpellE">advance_pc</span>
+  (4); else $d = 0; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">slt</span></font></span> $d, $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 1010</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLTI -- <i><span style="font-style:italic">Set on less than immediate (signed)</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">If $s is less than immediate, $t is set to one. It
+  gets zero otherwise. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; <span class="SpellE">imm</span> $t = 1; <span class="SpellE">advance_pc</span> (4); else $t = 0; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">slti</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0010 10ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLTIU -- <i><span style="font-style:italic">Set on less than immediate unsigned</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">If $s is less than the unsigned immediate, $t is set
+  to one. It gets zero otherwise. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; <span class="SpellE">imm</span> $t = 1; <span class="SpellE">advance_pc</span> (4); else $t = 0; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sltiu</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0010 11ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SLTU -- <i><span style="font-style:italic">Set on less than unsigned</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">If $s is less than $t, $d is set to one. It gets
+  zero otherwise. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">if $s &lt; $t $d = 1; <span class="SpellE">advance_pc</span>
+  (4); else $d = 0; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sltu</span></font></span> $d, $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 1011</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SRA -- <i><span style="font-style:italic">Shift right arithmetic</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Shifts a register value right by the shift amount (<span class="SpellE">shamt</span>) and places the value in the destination register.
+  The sign bit is shifted in. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $t &gt;&gt; h; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sra</span></font></span> $d, $t, h </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00-- ---t <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> <span class="SpellE">dhhh</span> hh00 0011</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SRL -- <i><span style="font-style:italic">Shift right logical</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Shifts a register value right by the shift amount (<span class="SpellE">shamt</span>) and places the value in the destination register.
+  Zeroes are shifted in. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $t &gt;&gt; h; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">srl</span></font></span> $d, $t, h </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00-- ---t <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> <span class="SpellE">dhhh</span> hh00 0010</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SRLV -- <i><span style="font-style:italic">Shift right logical variable</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Shifts a register value right by the amount
+  specified in $s and places the value in the destination register. Zeroes are
+  shifted in. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $t &gt;&gt; $s; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">srlv</span></font></span> $d, $t, $s </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0000 0110</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SUB -- <i><span style="font-style:italic">Subtract</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Subtracts two registers and stores the result in a
+  register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s - $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sub $d, $s, $t </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 <span class="SpellE">0010</span></span></font></code> </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SUBU -- <i><span style="font-style:italic">Subtract unsigned</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Subtracts two registers and stores the result in a
+  register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s - $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">subu</span></font></span> $d, $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d000 0010 0011</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SW -- <i><span style="font-style:italic">Store word</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">The contents of $t is stored at the specified
+  address. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">MEM[$s + offset] = $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">sw</span></font></span> $t, offset($s) </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">1010 11ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">SYSCALL -- <i><span style="font-style:italic">System call</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Generates a software interrupt. </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">advance_pc</span></font></span> (4); </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">syscall</span></font></span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00-- ---- ---- ---- ---- --00 1100</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:
+12.0pt"><br>
+The <span class="SpellE">syscall</span> instruction is described in more detail
+on the <a href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/callinfo.html">System Calls</a> page. </span></font></p>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">XOR -- <i><span style="font-style:italic">Bitwise exclusive or</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Exclusive ors two registers and stores the result in
+  a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$d = $s ^ $t; <span class="SpellE">advance_pc</span>
+  (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">xor</span></font></span> $d, $s, $t </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0000 00ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">dddd</span> d--- --10 0110</span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<h3><b style="mso-bidi-font-weight:normal"><font size="4" face="Times New Roman"><span style="font-size:13.5pt;mso-bidi-font-weight:normal">XORI -- <i><span style="font-style:italic">Bitwise exclusive or immediate</span></i></span></font></b></h3>
+
+<table class="MsoNormalTable" border="1" cellpadding="0" style="mso-cellspacing:1.5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Description:</span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Bitwise exclusive ors a register and an immediate
+  value and stores the result in a register </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Operation: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">$t = $s ^ <span class="SpellE">imm</span>; <span class="SpellE">advance_pc</span> (4); </span></font></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Syntax: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span class="SpellE"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">xori</span></font></span> $t, $s, <span class="SpellE">imm</span> </p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">Encoding: </span></font></p>
+  </td>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><code><font size="2" face="Courier New"><span style="font-size:10.0pt">0011 10ss <span class="SpellE">ssst</span> <span class="SpellE">tttt</span> <span class="SpellE">iiii</span> <span class="SpellE">iiii</span>
+  <span class="SpellE">iiii</span> <span class="SpellE">iiii</span></span></font></code>
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<div class="MsoNormal" align="center" style="text-align:center"><font size="3" face="Times New Roman"><span style="font-size:12.0pt">
+
+<hr size="2" width="100%" align="center">
+
+</span></font></div>
+
+<p class="MsoNormal"><cite><i style="mso-bidi-font-style:normal"><font size="3" face="Times New Roman"><span style="font-size:12.0pt;mso-bidi-font-style:normal">Updated
+on September 10, 1998</span></font></i></cite></p>
+
+</div>
+
+
+
+
+</body></html>
