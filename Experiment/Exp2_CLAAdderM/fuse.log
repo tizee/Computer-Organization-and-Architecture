@@ -1,23 +1,19 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.exe -prj D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM_test_beh.prj work.CLLAAdderM_test work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.exe -prj E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM_test_beh.prj work.CLLAAdderM_test work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/../Exp1_FullAdderM/fulladderM.v" into library work
-WARNING:HDLCompiler:751 - "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/../Exp1_FullAdderM/fulladderM.v" Line 28: Redeclaration of ansi port Cin is not allowed
-Analyzing Verilog file "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM.v" into library work
-Analyzing Verilog file "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM_test.v" into library work
+Analyzing Verilog file "E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM.v" into library work
+Analyzing Verilog file "E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM_test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:329 - "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM.v" Line 48: Target <C> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM.v" Line 54: Target <C> of concurrent assignment or output port connection should be a net type.
 Completed static elaboration
-Compiling module fulladderM
 Compiling module CLLAAdderM
 Compiling module CLLAAdderM_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 4 Verilog Units
-Built simulation executable D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.exe
-Fuse Memory Usage: 29436 KB
-Fuse CPU Usage: 374 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.exe
+Fuse Memory Usage: 29260 KB
+Fuse CPU Usage: 561 ms

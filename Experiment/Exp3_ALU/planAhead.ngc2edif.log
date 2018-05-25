@@ -1,0 +1,16 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ALU_M.ngc ...
+WARNING:NetListWriters:298 - No output is written to ALU_M.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus A<31 : 0> on block ALU_M is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   A1/Mcompar_A[31]_B[31]_LessThan_8_o_cy<15 : 0> on block ALU_M is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ALU_M.edif ...
+ngc2edif: Total memory usage is 86168 kilobytes
+

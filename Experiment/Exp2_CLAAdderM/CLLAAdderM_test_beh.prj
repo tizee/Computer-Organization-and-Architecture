@@ -1,4 +1,3 @@
-verilog work "../Exp1_FullAdderM/fulladderM.v"
 verilog work "CLLAAdderM.v"
 verilog work "CLLAAdderM_test.v"
 verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

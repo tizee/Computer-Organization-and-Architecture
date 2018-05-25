@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/CCOAexp/Experiment/Exp3_ALU/ALU_TEST_isim_beh.exe" -prj "E:/CCOAexp/Experiment/Exp3_ALU/ALU_TEST_beh.prj" "ALU_TEST" "work.glbl" 

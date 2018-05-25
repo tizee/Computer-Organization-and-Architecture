@@ -1,6 +1,9 @@
-set -tmpdir "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/xst/projnav.tmp"
-set -xsthdpdir "D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn CLLAAdderM.prj
+-ofn CLLAAdderM
+-ofmt NGC
 -p xc6slx16-3-csg324
 -top CLLAAdderM
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn CLLAAdderM.prj

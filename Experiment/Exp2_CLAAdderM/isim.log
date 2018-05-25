@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.wdb 
+Running: E:\CCOAexp\Experiment\Exp2_CLAAdderM\CLLAAdderM_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/CCOAexp/Experiment/Exp2_CLAAdderM/CLLAAdderM_test_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps

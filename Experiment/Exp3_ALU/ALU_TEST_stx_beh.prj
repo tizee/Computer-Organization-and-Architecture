@@ -1,0 +1,6 @@
+verilog isim_temp "CLED_M.v"
+verilog isim_temp "Choice_M.v"
+verilog isim_temp "ALU_TOP.v"
+verilog isim_temp "ALU_M.v"
+verilog isim_temp "ALU_TEST.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

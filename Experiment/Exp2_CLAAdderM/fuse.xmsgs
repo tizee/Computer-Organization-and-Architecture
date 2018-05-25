@@ -5,14 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/../Exp1_FullAdderM/fulladderM.v" Line 28: Redeclaration of ansi port <arg fmt="%s" index="1">Cin</arg> is not allowed
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM.v" Line 48: Target &lt;<arg fmt="%s" index="1">C</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"D:/COAexp-master/COAexp-master/Exp2_CLAAdderM/CLLAAdderM.v" Line 54: Target &lt;<arg fmt="%s" index="1">C</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
 </messages>
 

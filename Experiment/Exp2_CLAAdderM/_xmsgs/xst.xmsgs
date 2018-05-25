@@ -5,56 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"D:\COAexp-master\COAexp-master\Exp1_FullAdderM\fulladderM.v" Line 28: Redeclaration of ansi port <arg fmt="%s" index="1">Cin</arg> is not allowed
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 38: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="248" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 38: Block identifier is required on this block
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 39: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 42: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 43: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 44: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="46" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 37: <arg fmt="%s" index="1">i</arg> is not a genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="44" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 37: <arg fmt="%s" index="1">i</arg> is not a constant
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1059" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 38: <arg fmt="%s" index="1">P</arg> is an unknown type
-</msg>
-
-<msg type="error" file="HDLCompiler" num="44" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 38: <arg fmt="%s" index="1">i</arg> is not a constant
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1059" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 39: <arg fmt="%s" index="1">G</arg> is an unknown type
-</msg>
-
-<msg type="error" file="HDLCompiler" num="44" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 39: <arg fmt="%s" index="1">i</arg> is not a constant
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1059" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 42: <arg fmt="%s" index="1">C</arg> is an unknown type
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1059" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 43: <arg fmt="%s" index="1">C</arg> is an unknown type
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1059" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 44: <arg fmt="%s" index="1">C</arg> is an unknown type
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 21: Module &lt;<arg fmt="%s" index="1">CLLAAdderM</arg>&gt; ignored due to previous errors.
-</msg>
-
 </messages>
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Reading design: CLLAAdderM.prj
 
@@ -105,10 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\COAexp-master\COAexp-master\Exp1_FullAdderM\fulladderM.v" into library work
-Parsing module <fulladderM>.
-WARNING:HDLCompiler:751 - "D:\COAexp-master\COAexp-master\Exp1_FullAdderM\fulladderM.v" Line 28: Redeclaration of ansi port Cin is not allowed
-Analyzing Verilog file "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" into library work
+Analyzing Verilog file "E:\CCOAexp\Experiment\Exp2_CLAAdderM\CLLAAdderM.v" into library work
 Parsing module <CLLAAdderM>.
 
 =========================================================================
@@ -117,39 +114,24 @@ Parsing module <CLLAAdderM>.
 
 Elaborating module <CLLAAdderM>.
 
-Elaborating module <fulladderM>.
-WARNING:HDLCompiler:1127 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 32: Assignment to Cin ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" Line 31: Net <C[2]> does not have a driver.
-WARNING:Xst:2972 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" line 32. All outputs of instance <FA0> of block <fulladderM> are unconnected in block <CLLAAdderM>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" line 33. All outputs of instance <FA1> of block <fulladderM> are unconnected in block <CLLAAdderM>. Underlying logic will be removed.
-
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <CLLAAdderM>.
-    Related source file is "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v".
-WARNING:Xst:647 - Input <Cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" line 32: Output port <F> of the instance <FA0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" line 32: Output port <Cout> of the instance <FA0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\COAexp-master\COAexp-master\Exp2_CLAAdderM\CLLAAdderM.v" line 33: Output port <F> of the instance <FA1> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <F<1:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <C<2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Related source file is "E:\CCOAexp\Experiment\Exp2_CLAAdderM\CLLAAdderM.v".
+    Found 5-bit adder for signal <n0011> created at line 29.
+    Found 5-bit adder for signal <n0004> created at line 29.
     Summary:
-	no macro.
+	inferred   2 Adder/Subtractor(s).
 Unit <CLLAAdderM> synthesized.
-
-Synthesizing Unit <fulladderM>.
-    Related source file is "D:\COAexp-master\COAexp-master\Exp1_FullAdderM\fulladderM.v".
-    Summary:
-Unit <fulladderM> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 4
- 1-bit xor2                                            : 4
+# Adders/Subtractors                                   : 2
+ 5-bit adder                                           : 2
 
 =========================================================================
 
@@ -162,8 +144,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 4
- 1-bit xor2                                            : 4
+# Adders/Subtractors                                   : 1
+ 5-bit adder carry in                                  : 1
 
 =========================================================================
 
@@ -204,12 +186,13 @@ Top Level Output File Name         : CLLAAdderM.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4
-#      GND                         : 1
-#      LUT2                        : 1
-#      LUT4                        : 2
-# IO Buffers                       : 9
-#      IBUF                        : 4
+# BELS                             : 8
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT5                        : 4
+#      LUT6                        : 1
+# IO Buffers                       : 14
+#      IBUF                        : 9
 #      OBUF                        : 5
 
 Device utilization summary:
@@ -219,19 +202,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    3  out of   9112     0%  
-    Number used as Logic:                 3  out of   9112     0%  
+ Number of Slice LUTs:                    8  out of   9112     0%  
+    Number used as Logic:                 8  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      3
-   Number with an unused Flip Flop:       3  out of      3   100%  
-   Number with an unused LUT:             0  out of      3     0%  
-   Number of fully used LUT-FF pairs:     0  out of      3     0%  
+ Number of LUT Flip Flop pairs used:      8
+   Number with an unused Flip Flop:       8  out of      8   100%  
+   Number with an unused LUT:             0  out of      8     0%  
+   Number of fully used LUT-FF pairs:     0  out of      8     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                          14
- Number of bonded IOBs:                   9  out of    232     3%  
+ Number of bonded IOBs:                  14  out of    232     6%  
 
 Specific Feature Utilization:
 
@@ -266,7 +249,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 5.456ns
+   Maximum combinational path delay: 6.392ns
 
 Timing Details:
 ---------------
@@ -274,22 +257,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 10 / 3
+  Total number of paths / destination ports: 34 / 5
 -------------------------------------------------------------------------
-Delay:               5.456ns (Levels of Logic = 3)
-  Source:            A<2> (PAD)
-  Destination:       Cout (PAD)
+Delay:               6.392ns (Levels of Logic = 4)
+  Source:            A<1> (PAD)
+  Destination:       F<3> (PAD)
 
-  Data Path: A<2> to Cout
+  Data Path: A<1> to F<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.222   0.879  A_2_IBUF (A_2_IBUF)
-     LUT4:I1->O            1   0.205   0.579  Cout1 (Cout_OBUF)
+     IBUF:I->O             3   1.222   0.995  A_1_IBUF (A_1_IBUF)
+     LUT5:I0->O            2   0.203   0.617  Madd_n0004_Madd_cy<2>11 (Madd_n0004_Madd_cy<2>1)
+     LUT5:I4->O            1   0.205   0.579  Madd_n0004_Madd_cy<3>11 (Madd_n0004_Madd_cy<3>)
      OBUF:I->O                 2.571          Cout_OBUF (Cout)
     ----------------------------------------
-    Total                      5.456ns (3.998ns logic, 1.458ns route)
-                                       (73.3% logic, 26.7% route)
+    Total                      6.392ns (4.201ns logic, 2.191ns route)
+                                       (65.7% logic, 34.3% route)
 
 =========================================================================
 
@@ -299,14 +283,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.14 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.23 secs
  
 --> 
 
-Total memory usage is 260288 kilobytes
+Total memory usage is 260672 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

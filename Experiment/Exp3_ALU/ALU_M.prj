@@ -1,0 +1,4 @@
+verilog work "CLED_M.v"
+verilog work "Choice_M.v"
+verilog work "ALU_TOP.v"
+verilog work "ALU_M.v"

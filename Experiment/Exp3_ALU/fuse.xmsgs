@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/CLED_M.v" Line 28: Redeclaration of ansi port <arg fmt="%s" index="1">LED</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/CLED_M.v" Line 29: Redeclaration of ansi port <arg fmt="%s" index="1">F</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/CLED_M.v" Line 30: Redeclaration of ansi port <arg fmt="%s" index="1">F_LED_SW</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/CLED_M.v" Line 31: Redeclaration of ansi port <arg fmt="%s" index="1">ZF</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/Choice_M.v" Line 26: Redeclaration of ansi port <arg fmt="%s" index="1">A</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/Choice_M.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">AB_SW</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/ALU_TOP.v" Line 29: Redeclaration of ansi port <arg fmt="%s" index="1">F</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"E:/CCOAexp/Experiment/Exp3_ALU/ALU_TOP.v" Line 30: Redeclaration of ansi port <arg fmt="%s" index="1">ZF</arg> is not allowed
+</msg>
+
+</messages>
+
