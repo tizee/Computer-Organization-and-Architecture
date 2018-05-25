@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/Exp4_Segment/Segment_Test_isim_beh.exe" -prj "E:/Exp4_Segment/Segment_Test_beh.prj" "work.Segment_Test" "work.glbl" 
