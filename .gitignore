@@ -4,3 +4,4 @@ Experiment/Report
 *.un~
 *.gitignore~
 book/
+book/*
