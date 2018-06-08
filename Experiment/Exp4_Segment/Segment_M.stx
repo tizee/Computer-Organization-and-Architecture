@@ -1,16 +1,16 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to E:/Exp4_Segment/xst/projnav.tmp
+--> Parameter TMPDIR set to E:/Exp4_Segment/Exp4_Segment/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
---> Parameter xsthdpdir set to E:/Exp4_Segment/xst
+--> Parameter xsthdpdir set to E:/Exp4_Segment/Exp4_Segment/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Segment_M.prj
 
@@ -39,12 +39,12 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "E:\Exp4_Segment\Segment_M.v" into library work
+Analyzing Verilog file "E:\Exp4_Segment\Exp4_Segment\Segment_M.v" into library work
 Parsing module <Segment_M>.
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.86 secs
+Total CPU time to Xst completion: 3.04 secs
  
 --> 
 

@@ -1,5 +1,5 @@
-set -tmpdir "E:/Exp4_Segment/xst/projnav.tmp"
-set -xsthdpdir "E:/Exp4_Segment/xst"
+set -tmpdir "E:/Exp4_Segment/Exp4_Segment/xst/projnav.tmp"
+set -xsthdpdir "E:/Exp4_Segment/Exp4_Segment/xst"
 run -compileonly yes
 -p xc6slx16-3-csg324
 -top Segment_M
